@@ -103,7 +103,8 @@ header {
 }
 
 .drawer {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
   position: absolute;
   width: 420px;
   height: 100%;
@@ -114,6 +115,7 @@ header {
 
   .items {
     overflow: auto;
+    flex: 1;
   }
   h2 {
     margin: 0;
