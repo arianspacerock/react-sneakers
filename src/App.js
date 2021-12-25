@@ -2,6 +2,10 @@ import Card from './components/Card/Card';
 import Headr from './components/Headr/Headr';
 import Drawer from './components/Drawer/Drawer';
 
+const arr = [
+    {name: 'Мужские Кроссовки Nike Blazer Mid Suede', price: 12999},
+    {name: 'Мужские Кроссовки Nike Air Max 270', price: 15600}
+]
 
 function App() {
     return (
