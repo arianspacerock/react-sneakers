@@ -1,7 +1,13 @@
-function Card(props) {
+import styles from './Card.module.scss'
+
+function Index(props) {
+    const onClickButton = () => {
+        alert(props.title)
+    }
+
     return (
-        <div className="card">
-            <div className="favorite">
+        <div className={styles.card}>
+            <div className={styles.favorite}>
                 <img src="/img/heart-unliked.svg" alt="unliked"/>
             </div>
             <img width={133} height={112} src={props.imageUrl} alt="image1"/>
@@ -11,7 +17,7 @@ function Card(props) {
                     <span>Цена:</span>
                     <b>{props.price}</b>
                 </div>
-                <button className="button">
+                <button className="button" onClick={onClickButton}>
                     <img width={11} height={11} src="/img/Plus.svg" alt="plus"/>
                 </button>
             </div>
@@ -19,4 +25,4 @@ function Card(props) {
     )
 }
 
-export default Card
+export default Index

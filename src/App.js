@@ -1,4 +1,4 @@
-import Card from './components/Card/Card';
+import Index from './components/Card';
 import Headr from './components/Headr/Headr';
 import Drawer from './components/Drawer/Drawer';
 
@@ -12,7 +12,7 @@ const arr = [
 function App() {
     return (
         <div className="wrapper clear">
-            <Headr/>
+            <Headr />
             <Drawer />
             <div className="content p-40">
                 <div className="d-flex align-center justify-between mb-40">
@@ -25,7 +25,7 @@ function App() {
 
                 <div className="d-flex">
                     {arr.map((obj) => (
-                        <Card title={obj.title} price={obj.price} imageUrl={obj.imageUrl}/>
+                        <Index title={obj.title} price={obj.price} imageUrl={obj.imageUrl}/>
                     ))}
                 </div>
             </div>
