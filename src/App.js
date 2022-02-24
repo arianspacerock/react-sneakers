@@ -1,7 +1,7 @@
-
-import Headr from './components/Headr/Headr';
-import Drawer from './components/Drawer/Drawer';
-import Card from "./components/Card";
+import React from 'react'
+import Headr from './components/Headr/Headr'
+import Drawer from './components/Drawer/Drawer'
+import Card from "./components/Card"
 
 const arr = [
     {title: 'Мужские Кроссовки Nike Blazer Mid Suede', price: "12 999 руб.", imageUrl: "/img/sneakers/image1.jpg"},
@@ -11,10 +11,12 @@ const arr = [
 ]
 
 function App() {
+    const [cartOpened, setCartOpened] = React.useState(false)
+
     return (
         <div className="wrapper clear">
-            <Headr />
-            <Drawer />
+            <Headr onClickCart = {() => setCartOpened(true)} />
+            {cartOpened && <Drawer onClose = {() => setCartOpened(false)} />}
             <div className="content p-40">
                 <div className="d-flex align-center justify-between mb-40">
                     <h1>Все кроссовки</h1>
@@ -40,4 +42,4 @@ function App() {
     );
 }
 
-export default App;
+export default App
