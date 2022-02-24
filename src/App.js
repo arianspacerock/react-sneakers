@@ -1,6 +1,7 @@
-import Index from './components/Card';
+
 import Headr from './components/Headr/Headr';
 import Drawer from './components/Drawer/Drawer';
+import Card from "./components/Card";
 
 const arr = [
     {title: 'Мужские Кроссовки Nike Blazer Mid Suede', price: "12 999 руб.", imageUrl: "/img/sneakers/image1.jpg"},
@@ -25,7 +26,13 @@ function App() {
 
                 <div className="d-flex">
                     {arr.map((obj) => (
-                        <Index title={obj.title} price={obj.price} imageUrl={obj.imageUrl}/>
+                        <Card
+                            title={obj.title}
+                            price={obj.price}
+                            imageUrl={obj.imageUrl}
+                            onFavorite={() => console.log('Нажали добавить')}
+                            onPlus={() => console.log('Нажали плюс')}
+                        />
                     ))}
                 </div>
             </div>
